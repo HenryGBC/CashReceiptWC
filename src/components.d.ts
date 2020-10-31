@@ -5,94 +5,147 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Config } from "./models/model";
 export namespace Components {
-    interface MyComponent {
+    interface CashReceipt {
         /**
           * The first name
          */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "config": Config;
     }
-    interface PostReceipt {
+    interface CompanyInfo {
         /**
           * The first name
          */
-        "first": string;
+        "config": Config;
+    }
+    interface CustomerInfo {
         /**
-          * The last name
+          * The first name
          */
-        "last": string;
+        "config": Config;
+    }
+    interface InvoiceInfo {
         /**
-          * The middle name
+          * The first name
          */
-        "middle": string;
+        "config": Config;
+    }
+    interface ItemsInfo {
+        /**
+          * The first name
+         */
+        "config": Config;
+    }
+    interface TotalInfo {
+        /**
+          * The first name
+         */
+        "config": Config;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLCashReceiptElement extends Components.CashReceipt, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLCashReceiptElement: {
+        prototype: HTMLCashReceiptElement;
+        new (): HTMLCashReceiptElement;
     };
-    interface HTMLPostReceiptElement extends Components.PostReceipt, HTMLStencilElement {
+    interface HTMLCompanyInfoElement extends Components.CompanyInfo, HTMLStencilElement {
     }
-    var HTMLPostReceiptElement: {
-        prototype: HTMLPostReceiptElement;
-        new (): HTMLPostReceiptElement;
+    var HTMLCompanyInfoElement: {
+        prototype: HTMLCompanyInfoElement;
+        new (): HTMLCompanyInfoElement;
+    };
+    interface HTMLCustomerInfoElement extends Components.CustomerInfo, HTMLStencilElement {
+    }
+    var HTMLCustomerInfoElement: {
+        prototype: HTMLCustomerInfoElement;
+        new (): HTMLCustomerInfoElement;
+    };
+    interface HTMLInvoiceInfoElement extends Components.InvoiceInfo, HTMLStencilElement {
+    }
+    var HTMLInvoiceInfoElement: {
+        prototype: HTMLInvoiceInfoElement;
+        new (): HTMLInvoiceInfoElement;
+    };
+    interface HTMLItemsInfoElement extends Components.ItemsInfo, HTMLStencilElement {
+    }
+    var HTMLItemsInfoElement: {
+        prototype: HTMLItemsInfoElement;
+        new (): HTMLItemsInfoElement;
+    };
+    interface HTMLTotalInfoElement extends Components.TotalInfo, HTMLStencilElement {
+    }
+    var HTMLTotalInfoElement: {
+        prototype: HTMLTotalInfoElement;
+        new (): HTMLTotalInfoElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
-        "post-receipt": HTMLPostReceiptElement;
+        "cash-receipt": HTMLCashReceiptElement;
+        "company-info": HTMLCompanyInfoElement;
+        "customer-info": HTMLCustomerInfoElement;
+        "invoice-info": HTMLInvoiceInfoElement;
+        "items-info": HTMLItemsInfoElement;
+        "total-info": HTMLTotalInfoElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface CashReceipt {
         /**
           * The first name
          */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "config"?: Config;
     }
-    interface PostReceipt {
+    interface CompanyInfo {
         /**
           * The first name
          */
-        "first"?: string;
+        "config"?: Config;
+    }
+    interface CustomerInfo {
         /**
-          * The last name
+          * The first name
          */
-        "last"?: string;
+        "config"?: Config;
+    }
+    interface InvoiceInfo {
         /**
-          * The middle name
+          * The first name
          */
-        "middle"?: string;
+        "config"?: Config;
+    }
+    interface ItemsInfo {
+        /**
+          * The first name
+         */
+        "config"?: Config;
+    }
+    interface TotalInfo {
+        /**
+          * The first name
+         */
+        "config"?: Config;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
-        "post-receipt": PostReceipt;
+        "cash-receipt": CashReceipt;
+        "company-info": CompanyInfo;
+        "customer-info": CustomerInfo;
+        "invoice-info": InvoiceInfo;
+        "items-info": ItemsInfo;
+        "total-info": TotalInfo;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
-            "post-receipt": LocalJSX.PostReceipt & JSXBase.HTMLAttributes<HTMLPostReceiptElement>;
+            "cash-receipt": LocalJSX.CashReceipt & JSXBase.HTMLAttributes<HTMLCashReceiptElement>;
+            "company-info": LocalJSX.CompanyInfo & JSXBase.HTMLAttributes<HTMLCompanyInfoElement>;
+            "customer-info": LocalJSX.CustomerInfo & JSXBase.HTMLAttributes<HTMLCustomerInfoElement>;
+            "invoice-info": LocalJSX.InvoiceInfo & JSXBase.HTMLAttributes<HTMLInvoiceInfoElement>;
+            "items-info": LocalJSX.ItemsInfo & JSXBase.HTMLAttributes<HTMLItemsInfoElement>;
+            "total-info": LocalJSX.TotalInfo & JSXBase.HTMLAttributes<HTMLTotalInfoElement>;
         }
     }
 }
